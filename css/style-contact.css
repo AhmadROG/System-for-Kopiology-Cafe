@@ -1,35 +1,107 @@
+/* General Body Styling */
 body {
-    background-color: #fffaf0;
+    background-color: #fffaf0; /* Light beige theme */
     color: #333;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* Header Section */
 header {
-    background-color: #ff6347;
+    background-color: #ff6347; /* Tomato red */
     color: white;
-    text-align: center;
-    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 70px; /* Adjust the height as needed */
 }
 
+header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: white;
+    color: #ff6347; /* Matches header background */
+}
+
+/* Highlight Contact Us Page Link */
+nav a[href="contact.html"] {
+    background-color: white;
+    color: #ff6347;
+    border-color: #ff6347;
+}
+
+/* Main Content Styling */
 main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #fff; /* White background for contrast */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Section Heading */
 h2 {
-    color: #ff6347;
+    color: #ff6347; /* Tomato red to match header */
     margin-bottom: 1rem;
+    text-align: center;
 }
 
+/* Contact Information List */
 ul {
-    list-style: none;
+    list-style: none; /* Removes bullet points */
     padding: 0;
 }
 
 ul li {
     margin-bottom: 0.5rem;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+/* Footer Section */
+footer {
+    background-color: #ff6347;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 0.9rem;
 }
