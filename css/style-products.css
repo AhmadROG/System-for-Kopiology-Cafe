@@ -1,97 +1,153 @@
 /* General Body Styling */
+:root {
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: 0.2rem solid var(--main-color);
+    --border-hover: 0.2rem dashed var(--main-color);
+}
+
 body {
-    background-color: #f2f2f2;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: var(--main-color);
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Header Section */
 header {
-    background-color: #ff6347; /* Tomato red */
-    color: white;
+    background-color: #fff;
+    color: var(--main-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 70px; /* Adjust the height as needed */
+    height: 70px;
 }
 
 header h1 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin: 0;
+    color: var(--main-color);
 }
 
 header nav {
     display: flex;
+    align-items: center;
 }
 
 header nav a {
-    margin: 0 10px;
-    color: white;
+    margin: 0 1rem;
+    color: var(--main-color);
     text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.7rem;
+    padding: 0.8rem 1.5rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
 }
 
-header nav a:hover {
-    background-color: white;
-    color: #ff6347; /* Matches header background */
+header nav a:hover,
+header nav a.active {
+    background-color: var(--main-color);
+    color: #fff;
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
 }
 
 /* Highlight Products Page Link */
 nav a[href="products.html"] {
-    background-color: white;
-    color: #ff6347;
-    border-color: #ff6347;
+    background-color: var(--main-color);
+    color: #fff;
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
 }
 
 /* Product List */
 ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 2rem auto;
     padding: 0;
     list-style-type: none; /* Remove bullets */
+    gap: 2rem; /* Space between items */
 }
 
 ul li {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    border: var(--border);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 20px;
-    margin: 10px;
+    padding: 2rem 1.5rem;
     flex: 1 1 300px; /* Adjust flex-basis as needed */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 ul li:hover {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
+    border-radius: var(--border-radius-hover);
+    border: var(--border-hover);
+}
+
+/* Product Titles */
+ul li h3 {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ul li p {
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 /* Footer Section */
 footer {
-    background-color: #ff6347;
-    color: white;
+    background-color: #fff;
+    color: var(--main-color);
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     position: relative;
     bottom: 0;
     width: 100%;
-    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+    border-top: var(--border);
+    box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 footer p {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav a {
+        margin: 0 0.5rem;
+        padding: 0.6rem 1rem;
+    }
+
+    ul {
+        gap: 1.5rem;
+    }
+
+    ul li {
+        padding: 1.5rem 1rem;
+        flex: 1 1 100%;
+    }
 }

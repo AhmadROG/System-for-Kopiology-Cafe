@@ -1,146 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Our Café, where we serve the finest coffee and freshly made pastries.">
-    <title>Welcome to Our Café</title>
-    <style>
-        /* General Body Styling */
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+/* General Body Styling */
+:root {
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: 0.2rem solid var(--main-color);
+    --border-hover: 0.2rem dashed var(--main-color);
+}
 
-        /* Header and Navigation */
-        header {
-            background-color: #ff6347; /* Vibrant red-orange similar to Foodpanda's theme */
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 2rem;
-            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+body {
+    background-color: #f9f9f9; /* Light background for modern look */
+    color: var(--main-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-        header h1 {
-            font-size: 1.8rem;
-            margin: 0;
-        }
+/* Header Section */
+header {
+    background-color: #fff;
+    color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        header nav {
-            display: flex;
-        }
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--main-color);
+}
 
-        header nav a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 8px 16px;
-            border-radius: 15px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+header nav {
+    display: flex;
+    align-items: center;
+}
 
-        header nav a:hover,
-        header nav a.active {
-            background-color: white;
-            color: #ff6347; /* Matches header background */
-        }
+header nav a {
+    margin: 0 1rem;
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 1.7rem;
+    padding: 0.8rem 1.5rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
 
-        /* Main Content */
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+header nav a:hover,
+header nav a.active {
+    background-color: var(--main-color);
+    color: #fff;
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
+}
 
-        main p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-top: 1rem;
-            color: #555;
-        }
+/* Main Content */
+main {
+    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    border: var(--border);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
 
-        /* Footer Section */
-        footer {
-            background-color: #ff6347;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
-        }
+main p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-top: 1rem;
+    color: var(--main-color);
+}
 
-        footer p {
-            font-size: 0.9rem;
-        }
+main:hover {
+    border-radius: var(--border-radius-hover);
+    border: var(--border-hover);
+}
 
-        /* Button Styling (Optional for Future Use) */
-        button {
-            background-color: #ff6347;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
+/* Footer Section */
+footer {
+    background-color: #fff;
+    color: var(--main-color);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: var(--border);
+    box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
 
-        button:hover {
-            background-color: #ff8261;
-            transform: scale(1.05);
-        }
+footer p {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
 
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
 
-            header nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+    nav a {
+        margin: 0 0.5rem;
+        padding: 0.6rem 1rem;
+    }
 
-            main {
-                padding: 1rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Our Café</h1>
-        <nav aria-label="Main Navigation">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
-    <main>
-        <p>Discover the best coffee and snacks in town!</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Our Café. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+    main {
+        padding: 2rem 1rem;
+    }
+}
