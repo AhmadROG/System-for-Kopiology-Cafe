@@ -31,17 +31,7 @@ header {
     height: 70px;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    color: var(--main-color);
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-}
-
+/* Navigation Styling */
 header nav a {
     margin: 0 1rem;
     color: var(--main-color);
@@ -61,56 +51,87 @@ header nav a.active {
     border-radius: var(--border-radius-hover);
 }
 
-/* Highlight Products Page Link */
-nav a[href="products.html"] {
+/* Categories Section */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+
+.category {
+    padding: 1rem 2rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    font-size: 1.5rem;
+    color: var(--main-color);
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.category:hover,
+.category.active {
     background-color: var(--main-color);
     color: #fff;
     border: var(--border-hover);
-    border-radius: var(--border-radius-hover);
 }
 
-/* Product List */
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0;
-    list-style-type: none; /* Remove bullets */
-    gap: 2rem; /* Space between items */
-}
-
-ul li {
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    border: var(--border);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+/* Menu Section */
+.menu-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
     text-align: center;
-    padding: 2rem 1.5rem;
-    flex: 1 1 300px; /* Adjust flex-basis as needed */
+}
+
+#menu-title {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item {
+    background-color: #fff;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
     transition: all 0.3s ease;
 }
 
-ul li:hover {
-    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-    border-radius: var(--border-radius-hover);
+.menu-item:hover {
+    transform: scale(1.05);
     border: var(--border-hover);
 }
 
-/* Product Titles */
-ul li h3 {
-    color: var(--main-color);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: calc(var(--border-radius) / 2);
 }
 
-ul li p {
-    color: #555;
+.menu-item h3 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin: 1rem 0 0.5rem;
+}
+
+.menu-item p {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
-    line-height: 1.6;
+    color: #555;
 }
 
 /* Footer Section */
@@ -133,21 +154,16 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        padding: 1rem;
+    .categories {
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
-    nav a {
-        margin: 0 0.5rem;
-        padding: 0.6rem 1rem;
+    .category {
+        flex: 1 1 auto;
     }
 
-    ul {
-        gap: 1.5rem;
-    }
-
-    ul li {
-        padding: 1.5rem 1rem;
-        flex: 1 1 100%;
+    .menu-items {
+        grid-template-columns: 1fr;
     }
 }

@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - Our Café</title>
-    <link rel="stylesheet" href="css/style-products.css"> 
-
+    <link rel="stylesheet" href="css/style-products.css">
 </head>
 <body>
     <header>
@@ -13,20 +12,32 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
+            <a href="products.html" class="active">Products</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
     <main>
-        <ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Pastries</li>
-            <li>Sandwiches</li>
-        </ul>
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="category" data-category="popular">Popular</div>
+            <div class="category" data-category="latte">Latte</div>
+            <div class="category" data-category="noncoffee">Non-Coffee</div>
+            <div class="category" data-category="spaghetti">Spaghetti</div>
+            <div class="category" data-category="western">Western</div>
+            <div class="category" data-category="ricenoodle">Rice & Noodle</div>
+        </section>
+
+        <!-- Menu Display Section -->
+        <section class="menu-section">
+            <h2 id="menu-title">Popular</h2>
+            <div class="menu-items" id="menu-items">
+                <!-- Menu items will be dynamically added here by JavaScript -->
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Our Café. All rights reserved.</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

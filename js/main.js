@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.fontSize = screenWidth < 768 ? `${baseFontSize * 0.9}px` : `${baseFontSize}px`;
     }
 
-    // Function to fix viewport height on mobile
+    // height utk phone
     function fixVH() {
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty("--vh", `${vh}px`);
     }
 
-    // Detect if the device is mobile
+    // detect phone web
     function detectMobile() {
         const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
         if (isMobile) {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Smooth scrolling for anchor links
+    // Smooth scrolling 
     function enableSmoothScroll() {
         document.querySelectorAll("a[href^='#']").forEach(anchor => {
             anchor.addEventListener("click", function (e) {
