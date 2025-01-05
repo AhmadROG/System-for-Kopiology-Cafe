@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Our Café</title>
+    <title>Kopiology Café</title>
     <link rel="stylesheet" href="css/style-products.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,15 +19,16 @@
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
+    
     <main>
         <!-- Categories Section -->
         <section class="categories">
-            <div class="category" data-category="popular">Popular</div>
-            <div class="category" data-category="latte">Latte</div>
-            <div class="category" data-category="noncoffee">Non-Coffee</div>
-            <div class="category" data-category="spaghetti">Spaghetti</div>
-            <div class="category" data-category="western">Western</div>
-            <div class="category" data-category="ricenoodle">Rice & Noodle</div>
+            <div class="category" data-category="popular" onclick="filterCategory('popular')">Popular</div>
+            <div class="category" data-category="latte" onclick="filterCategory('latte')">Latte</div>
+            <div class="category" data-category="noncoffee" onclick="filterCategory('noncoffee')">Non-Coffee</div>
+            <div class="category" data-category="spaghetti" onclick="filterCategory('spaghetti')">Spaghetti</div>
+            <div class="category" data-category="western" onclick="filterCategory('western')">Western</div>
+            <div class="category" data-category="ricenoodle" onclick="filterCategory('ricenoodle')">Rice & Noodle</div>
         </section>
 
         <!-- Menu Display Section -->
@@ -34,10 +38,13 @@
                 <!-- Menu items will be dynamically added here by JavaScript -->
             </div>
         </section>
-    </main>
+    </main>   
     <footer>
-        <p>&copy; 2024 Our Café. All rights reserved.</p>
+        <p>&copy; 2024 Kopiology Café. All rights reserved.</p>
     </footer>
+
     <script src="js/script.js"></script>
+
+    
 </body>
 </html>

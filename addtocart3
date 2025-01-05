@@ -1,0 +1,36 @@
+<section class="menu-section">
+    <h2 id="menu-title">Spaghetti</h2>
+    <div class="menu-items" id="menu-items">
+        <!-- Product 1: Carbonara -->
+        <div class="product-card">
+            <img src="images/carbonara.jpg" alt="Carbonara">
+            <h3>Carbonara</h3>
+            <p>RM 20.00</p>
+            <p>Creamy carbonara spaghetti</p>
+            <button class="add-to-cart" onclick="addToCart('Carbonara', 20)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2: Bolognese -->
+        <div class="product-card">
+            <img src="images/bolognese.jpg" alt="Bolognese">
+            <h3>Bolognese</h3>
+            <p>RM 18.00</p>
+            <p>Rich bolognese spaghetti</p>
+            <button class="add-to-cart" onclick="addToCart('Bolognese', 18)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3: Pesto Pasta -->
+        <div class="product-card">
+            <img src="images/pesto-pasta.jpg" alt="Pesto Pasta">
+            <h3>Pesto Pasta</h3>
+            <p>RM 22.00</p>
+            <p>Basil pesto with spaghetti</p>
+            <button class="add-to-cart" onclick="addToCart('Pesto Pasta', 22)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Submission Button -->
+    <div class="cart-submit">
+        <button onclick="submitCart()">Submit Order</button>
+    </div>
+</section>

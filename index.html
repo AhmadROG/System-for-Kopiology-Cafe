@@ -3,26 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Our Café, where we serve the finest coffee and freshly made pastries.">
-    <title>Welcome to Our Café</title>
-    <link rel="stylesheet" href="css/style-home.css"> <!-- Link to your external home.css file -->
+    <meta name="description" content="Welcome to Kopiology Café, where we serve the finest coffee and freshly made pastries.">
+    <meta name="author" content="Kopiology Café">
+    <meta name="keywords" content="coffee, café, pastries, drinks, snacks, menu">
+    <title>Welcome to Kopiology Café</title>
+    <link rel="stylesheet" href="css/style-home.css"> <!-- External home.css file -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon for the website -->
 </head>
 <body>
     <header>
-        <h1>Welcome to Our Café</h1>
-        <nav aria-label="Main Navigation">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
+        <div class="container">
+            <!-- Logo and Home Link -->
+            <h1>
+                <a href="index.html" title="Go to the homepage of Kopiology Café">Welcome to Kopiology Café</a>
+            </h1>
+    
+            <!-- Main Navigation -->
+            <nav>
+                <a href="index.html" aria-label="Home" class="nav-link">Home</a>
+                <a href="about.html" aria-label="About Us" class="nav-link">About Us</a>
+                <a href="products.html" aria-label="Products" class="nav-link">Products</a>
+                <a href="contact.html" aria-label="Contact Us" class="nav-link">Contact Us</a>
+            </nav>
+        </div>
     </header>
+    
     <main>
-        <p>Discover the best coffee and snacks in town!</p>
+        <section class="intro">
+            <h2>Discover the Best Coffee and Snacks in Machang Town!</h2>
+            <p>Indulge in our rich coffee blends and delicious Western dishes. Perfect for a quick snack or a relaxing break.</p>
+        </section>
+
+        <section class="featured">
+            <h3>Our Featured Products</h3>
+            <div class="product-gallery">
+                <!-- Featured Product 1: Coffee -->
+                <div class="product">
+                    <img src="images/freshly brewed coffee.jpg" alt="A freshly brewed cup of cappuccino with frothy milk" />
+                    <p>Freshly Brewed Coffee</p>
+                </div>
+                <!-- Featured Product 2: Western Dish -->
+                <div class="product">
+                    <img src="images/delicious western.jpg" alt="A plate of spaghetti with shrimp and aglio olio sauce" />
+                    <p>Delicious Western</p>
+                </div>
+                <!-- Featured Product 3: Fish and Chips -->
+                <div class="product">
+                    <img src="images/fish and chips.jpg" alt="Crispy fish fillets with golden fries on the side" />
+                    <p>Fish and Chips</p>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Our Café. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Kopiology Café. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>

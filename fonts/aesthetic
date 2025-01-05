@@ -1,0 +1,147 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Main Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Clean and modern for body text */
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; /* Elegant serif for the title */
+    font-size: 2.5em;
+    letter-spacing: 2px; /* Adds a bit of space between letters for a classic look */
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #ff6f61; /* A warm color that complements the café theme */
+}
+
+/* Navigation */
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    text-transform: uppercase; /* Adds a more sophisticated look */
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav a:hover {
+    background-color: #555;
+    transition: background-color 0.3s ease;
+}
+
+nav a.active {
+    background-color: #777;
+}
+
+/* Categories Section */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.category {
+    background-color: #e2e2e2;
+    padding: 15px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Lora', serif; /* Serif font for a more classic, elegant feel */
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.category:hover {
+    background-color: #ff6f61; /* Hover effect matching the header color */
+    color: white;
+}
+
+.category:active {
+    transform: scale(0.98); /* Slight shrink effect on click */
+}
+
+/* Menu Section */
+.menu-section {
+    background-color: white;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#menu-title {
+    font-family: 'Playfair Display', serif; /* Elegant serif for section titles */
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Menu Items */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slight lift effect */
+}
+
+.menu-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.menu-item p {
+    color: #777;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+}
