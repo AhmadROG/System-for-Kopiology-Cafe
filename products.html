@@ -8,19 +8,49 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- 🎨 Tambah Gaya untuk "Our Menu" di sini -->
+    <style>
+        header h1 {
+            font-family: 'Playfair Display', serif; /* Guna font elegan */
+            font-size: 60px; /* Besarkan saiz */
+            color: #4e342e; /* Warna coklat kopi */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Bayang lembut */
+            text-align: center; /* Tengah */
+            margin-top: 20px;
+        }
+
+        /* Hover effect */
+        header h1:hover {
+            color: #a1887f; /* Cerahkan warna bila hover */
+            transform: scale(1.05); /* Zoom sikit */
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Our Products</h1>
+        <h1>Our Menu</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="products.html" class="active">Products</a>
+            <a href="products.html" class="active">Menu</a>
             <a href="contact.html">Contact Us</a>
+            <button id="view-cart-btn">View Cart 🛒 (<span id="cart-count">0</span>)</button>
+            <button id="view-points-btn">View Points ⭐ (<span id="points-total">0</span>)</button>
+
         </nav>
     </header>
     
     <main>
+        <!-- Popup Cart Section -->
+<div id="cart-popup" class="cart-popup">
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <p>Total: <span id="cart-total">RM 0.00</span></p>
+    <button onclick="checkout()">Checkout</button>
+    <button onclick="closeCart()">Close</button>
+</div>
         <!-- Categories Section -->
         <section class="categories">
             <div class="category" data-category="popular" onclick="filterCategory('popular')">Popular</div>
@@ -38,6 +68,33 @@
                 <!-- Menu items will be dynamically added here by JavaScript -->
             </div>
         </section>
+
+        <!-- Pop-up Points Section -->
+<div id="points-popup" class="popup">
+    <h3>Your Points</h3>
+    <p>Total Points: <span id="display-points">0</span></p>
+
+    <h4>Redeem Rewards:</h4>
+    <button id="redeem-drink-btn">Redeem free Drink (1000 Points)</button>
+    <button id="redeem-food-btn">Redeem free Food (2000 Points)</button>
+
+    <h4>Points you will get for every purchase:</h4>
+    <ul>
+        <li>Food - 15 Points</li>
+        <li>Drink - 10 Points</li>
+        
+    </ul>
+
+    <button onclick="closePoints()">Close</button>
+    <p id="points-message"></p>
+</div>
+
+<!-- Paparan pilihan selepas tebus -->
+<div id="redeem-selection" style="display: none; margin-top: 20px;">
+    <h4>Redeem now!!!</h4>
+    <div id="redeem-items" class="redeem-items-container"></div>
+</div>
+
     </main>   
     <footer>
         <p>&copy; 2024 Kopiology Café. All rights reserved.</p>

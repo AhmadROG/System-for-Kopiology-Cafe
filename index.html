@@ -7,7 +7,7 @@
     <meta name="author" content="Kopiology Café">
     <meta name="keywords" content="coffee, café, pastries, drinks, snacks, menu">
     <title>Welcome to Kopiology Café</title>
-    <link rel="stylesheet" href="css/style-home.css"> <!-- External home.css file -->
+    <link rel="stylesheet" href="css/style-index.css"> <!-- External home.css file -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon for the website -->
 </head>
 <body>
@@ -17,13 +17,34 @@
             <h1>
                 <a href="index.html" title="Go to the homepage of Kopiology Café">Welcome to Kopiology Café</a>
             </h1>
+            <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    h1 a {
+        font-family: 'Great Vibes', cursive; /* Font elegan */
+        font-size: 60px; /* Besarkan teks */
+        color: #4e342e; /* Warna kopi */
+        text-decoration: none; /* Buang garis bawah */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Bayang lembut */
+    }
+
+    h1 a:hover {
+        color: #a1887f; /* Warna hover */
+        transform: scale(1.05); /* Zoom sikit bila hover */
+        transition: 0.3s ease-in-out;
+    }
+</style>
     
             <!-- Main Navigation -->
             <nav>
-                <a href="index.html" aria-label="Home" class="nav-link">Home</a>
-                <a href="about.html" aria-label="About Us" class="nav-link">About Us</a>
-                <a href="products.html" aria-label="Products" class="nav-link">Products</a>
-                <a href="contact.html" aria-label="Contact Us" class="nav-link">Contact Us</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="products.html" class="nav-link">Menu</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="signup.html" class="nav-link">Sign Up</a>
+                <a href="login.html" class="nav-link">Log In</a>
+                <a href="logout.php" class="nav-link">Log Out</a>
             </nav>
         </div>
     </header>
